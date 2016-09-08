@@ -3,6 +3,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</StartProgram>
-    <StartArguments>-noexit -command Import-Module -Verbose ./ZabbixTemplates.dll</StartArguments>
+    <StartArguments>-NoExit -NoLogo -Command Import-Module -Verbose ./ZabbixTemplates.dll</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe</StartProgram>
+    <StartArguments>-NoExit -NoLogo -Command Import-Module -Verbose ./ZabbixTemplates.dll</StartArguments>
   </PropertyGroup>
 </Project>

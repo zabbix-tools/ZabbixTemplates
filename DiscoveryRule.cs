@@ -20,7 +20,7 @@
 This discovery rule requires the 'perf_counter.discovery[]' key to be configured on the remote agent to execute the 'Get-CounterSetInstances.ps1' PowerShell script.
 ", pdhCategory.CategoryHelp);
 
-            Key = String.Format(@"perf_counter.discovery[""\{0}""]", pdhCategory.CategoryName);
+            Key = String.Format(@"perf_counter.discovery[""{0}""]", pdhCategory.CategoryName);
 
             /*
              * If instances exist on the source machine, search counters on each instance. 
@@ -53,7 +53,7 @@ This discovery rule requires the 'perf_counter.discovery[]' key to be configured
             {
                 ItemPrototypes.Add(new Item{
                     Name = String.Format("{0} on {{#INSTANCE}}", pdhCounter.CounterName),
-                    Key = String.Format(@"perf_counter[""\{0} ({{#INSTANCE}})\{1}""]", pdhCategory.CategoryName, pdhCounter.CounterName),
+                    Key = String.Format(@"perf_counter[""\{0}({{#INSTANCE}})\{1}""]", pdhCategory.CategoryName, pdhCounter.CounterName),
                     Description = pdhCounter.CounterHelp,
                 });
             }

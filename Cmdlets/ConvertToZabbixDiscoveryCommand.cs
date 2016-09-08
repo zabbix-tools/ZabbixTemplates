@@ -24,7 +24,7 @@
         protected override void BeginProcessing()
         {
             _sb = new StringBuilder();
-            _sb.Append(@"{{""data"":[");
+            _sb.Append(@"{""data"":[");
         }
 
         protected override void ProcessRecord()
