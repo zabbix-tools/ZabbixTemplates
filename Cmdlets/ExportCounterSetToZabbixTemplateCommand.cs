@@ -33,7 +33,7 @@
         /// The help
         /// </summary>
         [Parameter(Position = 0, Mandatory = true)]
-        public string[] CounterSets { get; set; }
+        public string[] CounterSet { get; set; }
 
         [Parameter()]
         public string ComputerName
@@ -137,7 +137,7 @@
 
         protected override void ProcessRecord()
         {
-            foreach (string counterSet in CounterSets)
+            foreach (string counterSet in CounterSet)
             {
                 if (!PerformanceCounterCategory.Exists(counterSet))
                     throw new Exception(String.Format("Performance Counter Set not found: {0}.", counterSet));

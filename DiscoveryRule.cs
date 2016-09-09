@@ -17,7 +17,7 @@
             Description = String.Format(@"{0}
 
 * Note*
-This discovery rule requires the 'perf_counter.discovery[]' key to be configured on the remote agent to execute the 'Get-CounterSetInstances.ps1' PowerShell script.
+This discovery rule requires the 'perf_counter.discovery[]' key to be configured on the remote agent to execute the 'Get-CounterSetInstances' Cmdlet.
 ", pdhCategory.CategoryHelp);
 
             Key = String.Format(@"perf_counter.discovery[""{0}""]", pdhCategory.CategoryName);
